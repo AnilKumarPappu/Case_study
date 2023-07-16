@@ -1,0 +1,39 @@
+datasets:
+  raw:
+    google_search_data:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/raw/Data/google_search_data.csv
+      driver_params: {}
+  
+    product_manufacturer_list:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/raw/Data/product_manufacturer_list.csv
+      driver_params: {}
+
+
+    sales_data:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/raw/Data/sales_data.csv
+      driver_params: {}
+
+    social_media_data:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/raw/Data/social_media_data.csv
+      driver_params: {}
+
+    theme_list:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/raw/Data/Theme_list.csv
+      driver_params: {}
+
+    theme_product_list:
+      type: ds
+      format: csv
+      uri: ${core.data_base_path}/raw/Data/Theme_product_list.csv
+      driver_params: {}
+  
