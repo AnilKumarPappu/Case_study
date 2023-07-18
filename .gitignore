@@ -15,9 +15,12 @@
 **/_version.py
 
 # Ignore dataset and model folders
-# data
+data
 artifacts
 mlruns
+
+*.csv
+
 
 src/tigerml
 src/BayesFramework
