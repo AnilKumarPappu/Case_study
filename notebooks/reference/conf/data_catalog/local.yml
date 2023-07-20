@@ -70,6 +70,11 @@ datasets:
       format: parquet
       uri: ${core.data_base_path}/cleaned/theme_product_list_df_clean.parquet
       driver_params: {}
+    social_media_data_df_clean:
+      type: ds
+      format: parquet
+      uri: ${core.data_base_path}/cleaned/social_media_data_df_clean.parquet
+      driver_params: {}
 # sample
     orders:
       type: ds
