@@ -66,13 +66,13 @@ datasets:
     theme_list:
       type: ds
       format: parquet
-      uri: ${core.data_base_path}/cleaned/Theme_list.parquet
+      uri: ${core.data_base_path}/cleaned/theme_list.parquet
       driver_params: {}
 
     theme_product_list:
       type: ds
       format: parquet
-      uri: ${core.data_base_path}/cleaned/Theme_product_list.parquet
+      uri: ${core.data_base_path}/cleaned/theme_product_list.parquet
       driver_params: {}
 
   train:

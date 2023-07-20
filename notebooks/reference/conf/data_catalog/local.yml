@@ -41,38 +41,38 @@ datasets:
     google_search_data:
       type: ds
       format: parquet
-      uri: ${core.data_base_path}/raw/google_search_data.csv
+      uri: ${core.data_base_path}/cleaned/google_search_data.parquet
       driver_params: {}
 
     product_manufacturer_list:
       type: ds
-      format: csv
-      uri: ${core.data_base_path}/raw/product_manufacturer_list.csv
+      format: parquet
+      uri: ${core.data_base_path}/cleaned/product_manufacturer_list.parquet
       driver_params: {}
 
 
     sales_data:
       type: ds
-      format: csv
-      uri: ${core.data_base_path}/raw/sales_data.csv
+      format: parquet
+      uri: ${core.data_base_path}/cleaned/sales_data.parquet
       driver_params: {}
 
     social_media_data:
       type: ds
-      format: csv
-      uri: ${core.data_base_path}/raw/social_media_data - C.csv
+      format: parquet
+      uri: ${core.data_base_path}/cleaned/social_media_data - C.parquet
       driver_params: {}
 
     theme_list:
       type: ds
-      format: csv
-      uri: ${core.data_base_path}/raw/Theme_list.csv
+      format: parquet
+      uri: ${core.data_base_path}/cleaned/Theme_list.parquet
       driver_params: {}
 
     theme_product_list:
       type: ds
-      format: csv
-      uri: ${core.data_base_path}/raw/Theme_product_list.csv
+      format: parquet
+      uri: ${core.data_base_path}/cleaned/Theme_product_list.parquet
       driver_params: {}
 
   train:
