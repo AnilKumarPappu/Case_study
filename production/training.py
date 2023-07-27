@@ -1,10 +1,10 @@
 """Processors for the model training step of the worklow."""
 import logging
 import os.path as op
-
 from sklearn.pipeline import Pipeline
 
 from ta_lib.core.api import (
+    DEFAULT_ARTIFACTS_PATH,
     get_dataframe,
     get_feature_names_from_column_transformer,
     get_package_path,
@@ -12,7 +12,6 @@ from ta_lib.core.api import (
     load_pipeline,
     register_processor,
     save_pipeline,
-    DEFAULT_ARTIFACTS_PATH
 )
 from ta_lib.regression.api import SKLStatsmodelOLS
 
@@ -24,9 +23,9 @@ def train_model(context, params):
     """Train a regression model."""
     artifacts_folder = DEFAULT_ARTIFACTS_PATH
 
-    input_features_ds = "train/sales/features"
-    input_target_ds = "train/sales/target"
-    
+    input_features_ds = "train/features"
+    input_target_ds = "train/target"
+
     # load training datasets
     train_X = load_dataset(context, input_features_ds)
     train_y = load_dataset(context, input_target_ds)
@@ -58,6 +57,4 @@ def train_model(context, params):
     reg_ppln_ols.fit(train_X, train_y.values.ravel())
 
     # save fitted training pipeline
-    save_pipeline(
-        reg_ppln_ols, op.abspath(op.join(artifacts_folder, "train_pipeline.joblib"))
-    )
+    save_pipeline(reg_ppln_ols, op.abspath(op.join(artifacts_folder, "train_pipeline.joblib")))
