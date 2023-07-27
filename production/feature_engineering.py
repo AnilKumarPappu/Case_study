@@ -21,7 +21,7 @@ from ta_lib.core.api import (
     load_dataset,
     register_processor,
     save_pipeline,
-    DEFAULT_ARTIFACTS_PATH
+    DEFAULT_ARTIFACTS_PATH,
 )
 
 from ta_lib.data_processing.api import Outlier
@@ -100,12 +100,11 @@ def transform_features(context, params):
         sample_X = train_X
     sample_y = train_y.loc[sample_X.index]
 
-
     # Train the feature engg. pipeline prepared earlier. Note that the pipeline is
     # fitted on only the **training data** and not the full dataset.
     # This avoids leaking information about the test dataset when training the model.
     # In the below code train_X, train_y in the fit_transform can be replaced with
-    # sample_X and sample_y if required. 
+    # sample_X and sample_y if required.
     train_X = get_dataframe(
         features_transformer.fit_transform(train_X, train_y),
         get_feature_names_from_column_transformer(features_transformer),
