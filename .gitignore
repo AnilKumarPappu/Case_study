@@ -15,7 +15,7 @@
 **/_version.py
 
 # Ignore dataset and model folders
-# data
+data
 artifacts
 mlruns
 

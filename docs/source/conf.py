@@ -15,7 +15,7 @@ import os.path as op
 import sys
 
 HERE = op.dirname(op.abspath(__file__))
-LIB_PKG_PATH = op.abspath(op.join(HERE, "..", "..", 'src'))
+LIB_PKG_PATH = op.abspath(op.join(HERE, "..", "..", "src"))
 sys.path.insert(0, LIB_PKG_PATH)
 # NOTE: This is needed for jupyter-sphinx to be able to build docs
 os.environ["PYTHONPATH"] = ":".join((LIB_PKG_PATH, os.environ.get("PYTHONPATH", "")))
@@ -23,7 +23,7 @@ os.environ["PYTHONPATH"] = ":".join((LIB_PKG_PATH, os.environ.get("PYTHONPATH", 
 
 # -- Project information -----------------------------------------------------
 
-project = "Project_X"
+project = "Case Study"
 copyright = "2020, Tiger Analytics"
 author = "Tiger Analytics"
 

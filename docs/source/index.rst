@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Project_X documentation!
+Welcome to Case Study documentation!
 ===================================
 
 .. toctree::
@@ -11,10 +11,12 @@ Welcome to Project_X documentation!
    :caption: Contents:
 
    project_overview
-   developer_guide
-   api_guide
-   user_guide
-   best_practices
+   modeling_approach
+   evaluation_reports
+   .. developer_guide
+   .. api_guide
+   .. user_guide
+   .. best_practices
 
 
 Indices and tables

@@ -3,21 +3,27 @@ jobs:
     stages:
       - name: "clean-base-tables"
         tasks:
-          - name: "product"
+          - name: "google_search"
             params: {}
-          - name: "orders"
-            params: {}
-
-      - name: "clean-derivative-tables"
-        tasks:
           - name: "sales"
             params: {}
+          - name: "social_media"
+            params: {}
+          - name: "product_manufacturer"
+            params: {}
+          - name: "theme_list"
+            params: {}
+          - name: "theme_product"
+            params: {}
+
+      # - name: "clean-derivative-tables"
+      #   tasks:
+      #     - name: "sales"
+      #       params: {}
       - name: "train-test-split"
         tasks:
           - name: "train-test"
-            params:
-              target: unit_price
-              test_size: 0.2
+            params: {}
 
   - name: feat-engg
     stages:
