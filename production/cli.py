@@ -9,7 +9,7 @@ from ta_lib.core.api import (
     job_planner,
     job_runner,
     list_jobs,
-    load_job_processors
+    load_job_processors,
 )
 
 HERE = op.dirname(op.abspath(__file__))
@@ -47,7 +47,7 @@ def job(cli_ctx):
 @job.command("list")
 @click.pass_context
 def _list_jobs(cli_ctx):
-
+    """########"""
     # -------------
     # Data commands
     # -------------
@@ -63,10 +63,16 @@ def _list_jobs(cli_ctx):
 
 @job.command("run")
 @click.option(
-    "-j", "--job-id", default="all", help="Id of the job to run",
+    "-j",
+    "--job-id",
+    default="all",
+    help="Id of the job to run",
 )
 @click.option(
-    "-n", "--num-workers", default=1, help="Number of worker processes",
+    "-n",
+    "--num-workers",
+    default=1,
+    help="Number of worker processes",
 )
 @click.option(
     "-t",
@@ -76,7 +82,6 @@ def _list_jobs(cli_ctx):
 )
 @click.pass_context
 def _run_job(cli_ctx, job_id, num_workers, num_threads_per_worker):
-
     proj_ctxt = cli_ctx.obj["project_context"]
     job_catalog = proj_ctxt.job_catalog
 
