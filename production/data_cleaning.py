@@ -325,7 +325,7 @@ def create_training_datasets(context, params):
     )
     social_google.drop(["theme_id"], axis=1, inplace=True)
 
-    social_google_sales_processed = pd.merge(
+    social_google_sales = pd.merge(
         social_google,
         sales_weekly,
         how="inner",
@@ -333,11 +333,22 @@ def create_training_datasets(context, params):
         validate="1:1",
     )
 
+    social_google_sales["weight_per_unit"] = (
+        social_google_sales["sales_lbs_value"]
+        / social_google_sales["sales_units_value"]
+    )
+    social_google_sales["weight_per_unit"] = social_google_sales[
+        "weight_per_unit"
+    ].round(2)
+    social_google_sales.drop(
+        ["sales_units_value", "sales_lbs_value"], axis=1, inplace=True
+    )
+
     splitter = StratifiedShuffleSplit(
         n_splits=1, test_size=0.2, random_state=context.random_seed
     )
     train, test = custom_train_test_split(
-        social_google_sales_processed, splitter, by=binned_selling_price
+        social_google_sales, splitter, by=binned_selling_price
     )
 
     target_col = "sales_dollars_value"
