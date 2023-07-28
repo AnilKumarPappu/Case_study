@@ -2,7 +2,7 @@
 .env
 
 # ignore html files
-*.htm[l]
+# *.htm[l]
 
 # ignore log files
 **/logs/
@@ -16,7 +16,7 @@
 
 # Ignore dataset and model folders
 data
-artifacts
+# artifacts
 mlruns
 
 src/tigerml
