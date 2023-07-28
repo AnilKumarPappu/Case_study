@@ -13,10 +13,10 @@ Welcome to Case Study documentation!
    project_overview
    modeling_approach
    evaluation_reports
-   .. developer_guide
-   .. api_guide
-   .. user_guide
-   .. best_practices
+   developer_guide
+   api_guide
+   user_guide
+   best_practices
 
 
 Indices and tables
